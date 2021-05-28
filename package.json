@@ -5,10 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test-all-chrome": "testcafe chrome ./pom/tests",
-    "test-login-chrome": "testcafe chrome .pom/tests/Login.test.js",
-    "test-logout-chrome": "testcafe chrome .pom/tests/Logout.test.js",
-    "test-checkout-chrome": "testcafe chrome .pom/tests/Checkout.test.js",
-    "test-shopingCart-chrome": "testcafe chrome .pom/tests/ShopingCartlogin.test.js"
+    "test-login-chrome": "testcafe chrome ./pom/tests/Login.test.js",
+    "test-logout-chrome": "testcafe chrome ./pom/tests/Logout.test.js",
+    "test-checkout-chrome": "testcafe chrome ./pom/tests/Checkout.test.js",
+    "test-shopingCart-chrome": "testcafe chrome ./pom/tests/ShopingCart.test.js"
   },
   "author": "",
   "license": "ISC",
