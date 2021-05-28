@@ -1,13 +1,14 @@
 import loginPage from '../pages/LoginPage'
 import productPage from '../pages/ProductPage'
+import { URLS, CREDENTIALS } from '../data/Constants'
 
 fixture('Logout feature test')
-    .page('https://www.saucedemo.com/')
+    .page(`${URLS.LOGIN_PAGE}`)
 
 test('User logout from product´s page', async t => {
     await t.
-    typeText(loginPage.usernameField, "standard_user", {paste:true})
-    .typeText(loginPage.passwordField, "secret_sauce", {paste:true})
+    typeText(loginPage.usernameField, CREDENTIALS.VALID_USER.USERNAME, {paste:true})
+    .typeText(loginPage.passwordField, CREDENTIALS.VALID_USER.PASSWORD, {paste:true})
     .click(loginPage.loginButton)
     .click(productPage.burgerButton)
     .click(productPage.logout)

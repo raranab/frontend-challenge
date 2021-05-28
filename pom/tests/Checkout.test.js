@@ -5,13 +5,14 @@ import checkoutYourInformationPage from '../pages/CheckoutYourInformationPage'
 import yourCartPage from '../pages/YourCartPage'
 import checkoutOverviewPage from '../pages/CheckoutOverviewPage'
 import checkoutCompletePage from '../pages/CheckoutCompletePage'
+import { URLS, CREDENTIALS } from '../data/Constants'
 
 fixture('Checkout feature test')
-    .page('https://www.saucedemo.com/')
+    .page(`${URLS.LOGIN_PAGE}`)
     .beforeEach(async t => {
         await t.
-        typeText(loginPage.usernameField, "standard_user", {paste:true})
-        .typeText(loginPage.passwordField, "secret_sauce", {paste:true})
+        typeText(loginPage.usernameField, CREDENTIALS.VALID_USER.USERNAME, {paste:true})
+        .typeText(loginPage.passwordField, CREDENTIALS.VALID_USER.PASSWORD, {paste:true})
         .click(loginPage.loginButton)
     })
 

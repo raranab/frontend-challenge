@@ -1,13 +1,14 @@
 import cartPage from '../pages/YourCartPage'
 import loginPage from '../pages/LoginPage'
 import productPage from '../pages/ProductPage'
+import { URLS, CREDENTIALS} from '../data/Constants'
 
 fixture('Shoping Cart feature test')
-    .page('https://www.saucedemo.com/')
+    .page(`${URLS.LOGIN_PAGE}`)
     .beforeEach(async t => {
         await t.
-        typeText(loginPage.usernameField, "standard_user", {paste:true})
-        .typeText(loginPage.passwordField, "secret_sauce", {paste:true})
+        typeText(loginPage.usernameField, CREDENTIALS.VALID_USER.USERNAME, {paste:true})
+        .typeText(loginPage.passwordField, CREDENTIALS.VALID_USER.PASSWORD, {paste:true})
         .click(loginPage.loginButton)
     })
 
